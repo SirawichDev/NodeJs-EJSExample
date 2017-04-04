@@ -1,0 +1,333 @@
+<style>
+	body,
+	html {
+		@import url(http://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		font-family: 'Sniglet', cursive;
+	}
+
+	h1 {
+		font-weight: normal;
+		font-size: 4em;
+		font-family: 'Raleway', sans-serif;
+		margin: 0 auto;
+		margin-top: 30px;
+		width: 500px;
+		color: #F90;
+		text-align: center;
+	}
+
+	h2 {
+		font-weight: normal;
+		font-size: 2em;
+		font-family: 'Raleway', sans-serif;
+		margin: 0 auto;
+		margin-top: 30px;
+		width: 200px;
+		color: #F90;
+		text-align: center;
+	}
+	/* Animation webkit */
+
+	@-webkit-keyframes myfirst {
+		0% {
+			margin-left: -235px
+		}
+		90% {
+			margin-left: 100%;
+		}
+		100% {
+			margin-left: 100%;
+		}
+	}
+	/* Animation */
+
+	@keyframes myfirst {
+		0% {
+			margin-left: -235px
+		}
+		70% {
+			margin-left: 100%;
+		}
+		100% {
+			margin-left: 100%;
+		}
+	}
+
+	.fish {
+		background-image: url('http://www.geertjanhendriks.nl/codepen/form/fish.png');
+		width: 235px;
+		height: 104px;
+		margin-left: -235px;
+		position: absolute;
+		animation: myfirst 24s;
+		-webkit-animation: myfirst 24s;
+		animation-iteration-count: infinite;
+		-webkit-animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		-webkit-animation-timing-function: linear;
+	}
+
+	#fish {
+		top: 120px;
+	}
+
+	#fish2 {
+		top: 260px;
+		animation-delay: 12s;
+		-webkit-animation-delay: 12s;
+	}
+
+	header {
+		height: 160px;
+		background: url('http://www.geertjanhendriks.nl/codepen/form/golf.png') repeat-x bottom;
+	}
+
+	#form {
+		height: 100%;
+		background-color: #98d4f3;
+		overflow: hidden;
+		position: relative;
+	}
+
+	form {
+		margin: 0 auto;
+		width: 500px;
+		padding-top: 40px;
+		color: white;
+		position: relative;
+	}
+
+	label,
+	input,
+	textarea {
+		display: block;
+	}
+
+	input,
+	textarea {
+		width: 500px;
+		text-align: center;
+		border: none;
+		border-radius: 20px;
+		outline: none;
+		padding: 10px;
+		font-family: 'Sniglet', cursive;
+		font-size: 1em;
+		color: #676767;
+		transition: border 0.5s;
+		-webkit-transition: border 0.5s;
+		-moz-transition: border 0.5s;
+		-o-transition: border 0.5s;
+		border: solid 3px #98d4f3;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	input:focus,
+	textarea:focus {
+		border: solid 3px #77bde0;
+	}
+
+	textarea {
+		height: 100px;
+		resize: none;
+		overflow: auto;
+	}
+
+	input[type="submit"] {
+		background-color: #F90;
+		color: white;
+		height: 50px;
+		cursor: pointer;
+		margin-top: 30px;
+		font-size: 1.29em;
+		font-family: 'Sniglet', cursive;
+		-webkit-transition: background-color 0.5s;
+		-moz-transition: background-color 0.5s;
+		-o-transition: background-color 0.5s;
+		transition: background-color 0.5s;
+	}
+
+	input[type="submit"]:hover {
+		background-color: #e58f0e;
+	}
+
+	label {
+		font-size: 1.5em;
+		margin-top: 20px;
+		padding-left: 20px;
+	}
+
+	.formgroup,
+	.formgroup-active,
+	.formgroup-error {
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-size: 10.5%;
+		transition: background-image 0.7s;
+		-webkit-transition: background-image 0.7s;
+		-moz-transition: background-image 0.7s;
+		-o-transition: background-image 0.7s;
+		width: 566px;
+		padding-top: 2px;
+	}
+
+	.formgroup {
+		background-image: url('http://www.geertjanhendriks.nl/codepen/form/pixel.gif');
+	}
+
+	.formgroup-active {
+		background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo.png');
+	}
+
+	.formgroup-error {
+		background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo-error.png');
+		color: red;
+	}
+
+	button {
+		overflow: visible;
+		border: 0;
+		padding: 0;
+		margin: 1.8rem;
+	}
+
+	.btn.striped-shadow span {
+		display: block;
+		position: relative;
+		z-index: 2;
+		border: 5px solid;
+	}
+
+	.btn.striped-shadow.white span {
+		border-color: #fff;
+		color: #fff;
+		background: #77bfa1;
+	}
+
+	.btn.striped-shadow.blue span {
+		border-color: #4183D7;
+		background: #77bfa1;
+		color: #4183D7;
+	}
+
+	.btn.striped-shadow.dark span {
+		border-color: #393939;
+		background: #77bfa1;
+		color: #393939;
+	}
+
+	.btn {
+		font-family: 'Bungee Shade', sans-serif;
+		height: 80px;
+		line-height: 65px;
+		display: inline-block;
+		letter-spacing: 1px;
+		position: relative;
+		font-size: 1.25rem;
+		width: 250px;
+		transition: opacity .3s, z-index .3s step-end, -webkit-transform .3s;
+		transition: opacity .3s, z-index .3s step-end, transform .3s;
+		transition: opacity .3s, z-index .3s step-end, transform .3s, -webkit-transform .3s;
+		z-index: 1;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	.btn {
+		width: 155px;
+		height: 48px;
+		line-height: 38px;
+	}
+
+	button.btn.striped-shadow.white:after,
+	button.btn.striped-shadow.white:before {
+		background-image: linear-gradient(135deg, transparent 0, transparent 5px, #fff 5px, #fff 10px, transparent 10px);
+	}
+
+	button.btn.striped-shadow.blue:after,
+	button.btn.striped-shadow.blue:before {
+		background-image: linear-gradient(135deg, transparent 0, transparent 5px, #4183D7 5px, #4183D7 10px, transparent 10px);
+	}
+
+	button.btn.striped-shadow.dark:after,
+	button.btn.striped-shadow.dark:before {
+		background-image: linear-gradient(135deg, transparent 0, transparent 5px, #393939 5px, #393939 10px, transparent 10px);
+	}
+
+	button.btn.striped-shadow:hover:before {
+		max-height: calc(100% - 10px);
+	}
+
+	button.btn.striped-shadow:after {
+		width: calc(100% - 4px);
+		height: 8px;
+		left: -10px;
+		bottom: -9px;
+		background-size: 15px 8px;
+		background-repeat: repeat-x;
+	}
+
+	button.btn.striped-shadow:after,
+	button.btn.striped-shadow:before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 1;
+		transition: max-height .3s, width .3s, -webkit-transform .3s;
+		transition: transform .3s, max-height .3s, width .3s;
+		transition: transform .3s, max-height .3s, width .3s, -webkit-transform .3s;
+	}
+
+	.btn.striped-shadow:hover {
+		-webkit-transform: translate(-12px, 12px);
+		-ms-transform: translate(-12px, 12px);
+		transform: translate(-12px, 12px);
+		z-index: 3;
+	}
+
+	button.btn.striped-shadow:hover:after,
+	button.btn.striped-shadow:hover:before {
+		-webkit-transform: translate(12px, -12px);
+		-ms-transform: translate(12px, -12px);
+		transform: translate(12px, -12px);
+	}
+
+	button.btn.striped-shadow:before {
+		width: 8px;
+		max-height: calc(100% - 5px);
+		height: 100%;
+		left: -12px;
+		bottom: -5px;
+		background-size: 8px 15px;
+		background-repeat: repeat-y;
+		background-position: 0 100%;
+	}
+	.typewriter {
+		text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .10em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+</style>
