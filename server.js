@@ -16,11 +16,13 @@ res.render('pages/showCookie',{
 	cookie:a,
 });
 });
+//call cookie 
 app.post('/ck_set', function(req, res) {
 res.cookie('a', 10)
 res.cookie('foo','bar')
 res.send('ok')
 })
+//session by counter
 app.use(function(req, res, next) {
    var sess = req.session
    if (sess.views) {
@@ -32,6 +34,7 @@ app.use(function(req, res, next) {
    }
    next()
 })
+//call session
 app.post('/co',function(req,res){
 	var count = req.session.views;
 res.render('pages/showSession',{
@@ -41,16 +44,10 @@ res.render('pages/showSession',{
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-// use res.render to load up an ejs view file
-
-// index page
-
+// set init path at views
 app.set('views', __dirname + '/views');
-// about page
+
 app.get('/', function(req, res){
-  // The form's action is '/' and its method is 'POST',
-  // so the `app.post('/', ...` route will receive the
-  // result of our form
 	var a = res.cookie('a', 10)
 	res.cookie('foo','bar')
 res.render('pages/home',{
@@ -64,7 +61,7 @@ app.post('/', function(req, res){
 
   });
 });
-//==========For Cookie==
+
 
 
 
